@@ -1,5 +1,35 @@
-#ifndef MAIN_H_
-#define MAIN_H_
+#ifndef USB_DEV_MIDI_H_
+#define USB_DEV_MIDI_H_
+
+#include <stdint.h>
+#include <stdbool.h>
+#include <usbmidi_types.h>
+
+#include "inc/hw_memmap.h"
+#include "inc/hw_ints.h"
+#include "inc/hw_types.h"
+#include "inc/hw_gpio.h"
+
+#include "driverlib/rom.h"
+#include "driverlib/rom_map.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/uart.h"
+#include "driverlib/gpio.h"
+#include "driverlib/timer.h"
+#include "driverlib/interrupt.h"
+#include "driverlib/qei.h"
+#include "driverlib/sysctl.h"
+#include "driverlib/pin_map.h"
+
+#include "usblib/usblib.h"
+#include "usblib/device/usbdevice.h"
+#include "utils/uartstdio.h"
+#include "utils/ustdlib.h"
+
+#include "pconfig.h"
+#include "midi.h"
+#include "usbmidi.h"
+#include "midi_usb_rx_task.h"
 
 void Initialize(void) {
 

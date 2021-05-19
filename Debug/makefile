@@ -8,15 +8,15 @@ GEN_OPTS__FLAG :=
 GEN_CMDS__FLAG := 
 
 ORDERED_OBJS += \
-"./main.obj" \
 "./midi_usb_rx_task.obj" \
 "./startup_ccs.obj" \
+"./usb_dev_midi.obj" \
 "./include/usb_midi/usb_midi_fifo.obj" \
 "./include/usb_midi/usbmidi.obj" \
 "./include/usb_midi/usbmidi_handlers.obj" \
 "./utils/uartstdio.obj" \
 "./utils/ustdlib.obj" \
-"../usb_dev_bulk_ccs.cmd" \
+"../usb_dev_midi_ccs.cmd" \
 $(GEN_CMDS__FLAG) \
 -llibc.a \
 -l"/home/can/ti/TivaWare_C_Series-2.2.0.295/driverlib/ccs/Debug/driverlib.lib" \
@@ -166,8 +166,8 @@ usb_dev_midi.bin: $(EXE_OUTPUTS)
 # Other Targets
 clean:
 	-$(RM) $(BIN_OUTPUTS__QUOTED)$(EXE_OUTPUTS__QUOTED)
-	-$(RM) "main.obj" "midi_usb_rx_task.obj" "startup_ccs.obj" "include/usb_midi/usb_midi_fifo.obj" "include/usb_midi/usbmidi.obj" "include/usb_midi/usbmidi_handlers.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
-	-$(RM) "main.d" "midi_usb_rx_task.d" "startup_ccs.d" "include/usb_midi/usb_midi_fifo.d" "include/usb_midi/usbmidi.d" "include/usb_midi/usbmidi_handlers.d" "utils/uartstdio.d" "utils/ustdlib.d" 
+	-$(RM) "midi_usb_rx_task.obj" "startup_ccs.obj" "usb_dev_midi.obj" "include/usb_midi/usb_midi_fifo.obj" "include/usb_midi/usbmidi.obj" "include/usb_midi/usbmidi_handlers.obj" "utils/uartstdio.obj" "utils/ustdlib.obj" 
+	-$(RM) "midi_usb_rx_task.d" "startup_ccs.d" "usb_dev_midi.d" "include/usb_midi/usb_midi_fifo.d" "include/usb_midi/usbmidi.d" "include/usb_midi/usbmidi_handlers.d" "utils/uartstdio.d" "utils/ustdlib.d" 
 	-@echo 'Finished clean'
 	-@echo ' '
 

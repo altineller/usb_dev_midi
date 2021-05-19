@@ -1,7 +1,7 @@
 ******************************************************************************
                   TI ARM Linker Unix v20.2.5                   
 ******************************************************************************
->> Linked Wed May 19 05:41:55 2021
+>> Linked Wed May 19 13:37:09 2021
 
 OUTPUT FILE NAME:   <usb_dev_midi.out>
 ENTRY POINT SYMBOL: "_c_int00_noargs"  address: 000028dd
@@ -55,7 +55,7 @@ section   page    origin      length       input sections
                   00001144    000000bc                : usbdma.obj (.text:uDMAUSBTransfer)
                   00001200    000000b8     usbmidi_handlers.obj (.text:HandleEndpoints)
                   000012b8    000000b0     uartstdio.obj (.text:UARTStdioConfig)
-                  00001368    000000ac     main.obj (.text:Initialize)
+                  00001368    000000ac     usb_dev_midi.obj (.text:Initialize)
                   00001414    000000ac     uartstdio.obj (.text:UARTwrite)
                   000014c0    0000009c     rtsv7M4_T_le_v4SPD16_eabi.lib : memcpy_t2.asm.obj (.text)
                   0000155c    00000098     usblib.lib : usbdenum.obj (.text:USBDSetInterface)
@@ -63,7 +63,7 @@ section   page    origin      length       input sections
                   00001684    0000008c     uartstdio.obj (.text:UARTPrimeTransmit)
                   00001710    0000008c     usblib.lib : usbdconfig.obj (.text:USBDeviceConfigAlternate)
                   0000179c    00000088                : usbdma.obj (.text:iDMAUSBChannelAllocate)
-                  00001824    00000088     main.obj (.text:main)
+                  00001824    00000088     usb_dev_midi.obj (.text:main)
                   000018ac    0000007c     usblib.lib : usbdenum.obj (.text:USBDClearFeature)
                   00001928    0000007c     driverlib.lib : udma.obj (.text:uDMAChannelTransferSet)
                   000019a4    0000007a                   : usb.obj (.text:USBDevEndpointConfigSet)
@@ -75,7 +75,7 @@ section   page    origin      length       input sections
                   00001bf4    00000070                : usbdenum.obj (.text:USBDSetFeature)
                   00001c64    00000070     usbmidi.obj (.text:USBMIDI_InEpSendMessages)
                   00001cd4    00000070     usblib.lib : usbdma.obj (.text:uDMAUSBArbSizeSet)
-                  00001d44    00000068     main.obj (.text:ConfigureUART0)
+                  00001d44    00000068     usb_dev_midi.obj (.text:ConfigureUART0)
                   00001dac    00000068     driverlib.lib : interrupt.obj (.text:IntDisable)
                   00001e14    00000068                   : interrupt.obj (.text:IntEnable)
                   00001e7c    00000068     rtsv7M4_T_le_v4SPD16_eabi.lib : copy_decompress_lzss.c.obj (.text:decompress:lzss:__TI_decompress_lzss)
@@ -147,8 +147,8 @@ section   page    origin      length       input sections
                   00002ce0    00000022     usbmidi_handlers.obj (.text:HandleConfigChange)
                   00002d02    00000022     usblib.lib : usbdma.obj (.text:uDMAUSBChannelStatus)
                   00002d24    00000020                : usbdconfig.obj (.text:GetEndpointFIFOSize)
-                  00002d44    00000020     main.obj (.text:noteOff)
-                  00002d64    00000020     main.obj (.text:noteOn)
+                  00002d44    00000020     usb_dev_midi.obj (.text:noteOff)
+                  00002d64    00000020     usb_dev_midi.obj (.text:noteOn)
                   00002d84    0000001e     driverlib.lib : usb.obj (.text:USBULPIRegRead)
                   00002da2    0000001e                   : usb.obj (.text:USBULPIRegWrite)
                   00002dc0    0000001c     usblib.lib : usbdcdesc.obj (.text:USBDCDConfigGetInterface)
@@ -173,7 +173,7 @@ section   page    origin      length       input sections
                   00002f6a    00000012                   : usb.obj (.text:USBDMAChannelEnable)
                   00002f7c    00000012                   : usb.obj (.text:USBDMAChannelIntDisable)
                   00002f8e    00000012                   : usb.obj (.text:USBDMAChannelIntEnable)
-                  00002fa0    00000010     main.obj (.text:SysTickIntHandler)
+                  00002fa0    00000010     usb_dev_midi.obj (.text:SysTickIntHandler)
                   00002fb0    00000010     driverlib.lib : usb.obj (.text:USBEndpointStatus)
                   00002fc0    0000000e     usblib.lib : usbdma.obj (.text:DMAUSBIntStatusClear)
                   00002fce    0000000e     uartstdio.obj (.text:IsBufferEmpty)
@@ -294,8 +294,8 @@ MODULE SUMMARY
        ------                       ----    -------   -------
     ./
        startup_ccs.obj              12      620       0      
-       main.obj                     492     0         16     
-       midi_usb_rx_task.obj         68      0         0      
+       usb_dev_midi.obj             492     0         0      
+       midi_usb_rx_task.obj         68      0         16     
     +--+----------------------------+-------+---------+---------+
        Total:                       572     620       16     
                                                              
