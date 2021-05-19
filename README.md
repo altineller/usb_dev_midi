@@ -33,7 +33,7 @@ It should return:
 24:0 is the Audio Control Interface, Input
 24:1 is the Midi Streaming Interface, Output
 
-##### Transmitting Midi
+##### Transmitting MIDI
 
 The default program should send a note to channel 1, repeatedly, by making a 0.3s pause.  
 
@@ -49,12 +49,21 @@ Issue the following command:
 
 On your terminal, you should see the midi notes.  
 
-
-#### Echo program
+#### Echo MIDI
 
 Comment out the `MIDI_USB_Rx_Task();` and all the other noteOn, noteOff statements from the main loop and uncomment the:  
 
 `// MIDI_USB_Echo_Task();` statement.
 
 Connect 24:1 to Qsynth. All the notes you send to the midi device will be echoed back to Qsynth.
+
+#### Credits
+
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+- Copyright 2021 Stephan Bourgeois
+- Ported to TM4C123 by Can Altineller
+- Originally written by Andy Peters
+
+
 
