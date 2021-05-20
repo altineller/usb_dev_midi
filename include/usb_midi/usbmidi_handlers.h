@@ -1,3 +1,12 @@
+/* 
+ * usbmidi_handlers.h
+ *
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
+ *
+ * MODS:
+ * 2021-05-20, add this header.
+ */
 #ifndef USB_MIDI_USBMIDI_HANDLERS_H_
 #define USB_MIDI_USBMIDI_HANDLERS_H_
 
