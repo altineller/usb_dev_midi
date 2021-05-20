@@ -2,7 +2,11 @@
  * usbmidi.h
  *
  *  Created on: Jul 1, 2020
- *      Author: andy
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
+ *
+ * MODS: 
+ * 2021-05-20 andy, add copyright and contact info.
  */
 
 #ifndef USB_MIDI_USBMIDI_H_
