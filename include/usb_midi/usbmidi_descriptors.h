@@ -2,7 +2,11 @@
  * descriptors.h
  *
  *  Created on: Jan 30, 2020
- *      Author: andy
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
+ *
+ * MODS: 
+ * 2021-05-20 andy, add contact info and copyright.
  */
 
 #ifndef DESCRIPTORS_H_
