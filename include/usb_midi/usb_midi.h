@@ -2,7 +2,9 @@
  * \file usb_midi.h
  *
  *  Created on: Feb 1, 2019
- *      Author: andy
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
+ *
  *  Modification:
  *  2019-04-04 andy	Add more descriptor definitions.
  *  2019-04-30 andy Add prototype for midi message fifo pop.
