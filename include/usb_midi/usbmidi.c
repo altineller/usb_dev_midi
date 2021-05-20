@@ -74,7 +74,6 @@
 #include "usbmidi_types.h"
 #include "usbmidi_descriptors.h"
 #include "usbmidi_handlers.h"
-#include "pconfig.h"
 
 /**
  * Device Descriptor.

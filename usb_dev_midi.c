@@ -19,10 +19,6 @@
  */
 #include "usb_dev_midi.h"
 
-void SysTickIntHandler(void) {
-    g_ui32SysTickCount++;
-}
-
 int main(void) {
 
     // initialize tiva-c @ 80mhz
@@ -54,6 +50,7 @@ int main(void) {
     		if(prev_state == false) { prev_state = true; }
     	} else {
     		if(prev_state == true) { prev_state = false; }
+    		continue;
     	}
 
     	// will receive MIDI notes and print them on serial

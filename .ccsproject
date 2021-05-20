@@ -8,7 +8,6 @@
 	<isElfFormat value="true"/>
 	<rts value="libc.a"/>
 	<createSlaveProjects value=""/>
-	<origin value="/home/can/ti/tivaware_c_series_2_1_4_178/examples/boards/ek-tm4c123gxl/usb_dev_bulk/ccs"/>
 	<connection value="common/targetdb/connections/Stellaris_ICDI_Connection.xml"/>
 	<isTargetManual value="false"/>
 </projectOptions>

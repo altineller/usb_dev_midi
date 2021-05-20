@@ -50,6 +50,7 @@
 									<listOptionValue builtIn="false" value="${PROJECT_ROOT}/include"/>
 									<listOptionValue builtIn="false" value="${PROJECT_ROOT}/include/midi"/>
 									<listOptionValue builtIn="false" value="${PROJECT_ROOT}/include/usb_midi"/>
+									<listOptionValue builtIn="false" value="${PROJECT_ROOT}/include/drivers"/>
 								</option>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.ADVICE__POWER.239382967" name="Enable checking of ULP power rules (--advice:power)" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.ADVICE__POWER" value="all" valueType="string"/>
 								<option id="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DEBUGGING_MODEL.1382733046" name="Debugging model" superClass="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DEBUGGING_MODEL" value="com.ti.ccstudio.buildDefinitions.TMS470_20.2.compilerID.DEBUGGING_MODEL.SYMDEBUG__DWARF" valueType="enumerated"/>

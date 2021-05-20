@@ -26,10 +26,22 @@
 #include "utils/uartstdio.h"
 #include "utils/ustdlib.h"
 
-#include "pconfig.h"
 #include "midi.h"
 #include "usbmidi.h"
-#include "midi_usb_rx_task.h"
+
+#define SYSTICKS_PER_SECOND 100
+#define SYSTICK_PERIOD_MS   (1000 / SYSTICKS_PER_SECOND)
+
+uint32_t g_ui32SysTickCount;
+uint32_t g_ui32SysClock;
+
+USBMIDI_Message_t txmsg;
+USBMIDI_Message_t rxmsg;
+
+
+void SysTickIntHandler(void) {
+    g_ui32SysTickCount++;
+}
 
 void Initialize(void) {
 
@@ -47,6 +59,10 @@ void Initialize(void) {
 
     // Configure GPIO for LEDS
     GPIOPinTypeGPIOOutput(GPIO_PORTF_BASE, GPIO_PIN_1 | GPIO_PIN_2 | GPIO_PIN_3);
+
+    // Configure GPIO for Buttons
+    GPIOPinTypeGPIOInput(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0);
+    GPIOPadConfigSet(GPIO_PORTF_BASE, GPIO_PIN_4 | GPIO_PIN_0, GPIO_STRENGTH_2MA, GPIO_PIN_TYPE_STD_WPU);
 
     // Configure USBAnalog
     MAP_GPIOPinTypeUSBAnalog(GPIO_PORTD_BASE, GPIO_PIN_4 | GPIO_PIN_5);
@@ -101,6 +117,21 @@ void pitchBend(short channel, uint16_t pitch) {
     txmsg.byte2 = pitch & 0x7F; // lsb
     txmsg.byte3 = (pitch >> 7) & 0x7F; // msb
     USBMIDI_InEpMsgWrite(&txmsg);
+}
+
+void MIDI_USB_Rx_Task(void) {
+    while(USBMIDI_OutEpFIFO_Pop(&rxmsg)) {
+        UARTprintf("%02x : %02x : %02x : %02x\n", rxmsg.header, rxmsg.byte1, rxmsg.byte2, rxmsg.byte3);
+    }
+}
+
+void MIDI_USB_Loop_Task(void) {
+    while(USBMIDI_OutEpFIFO_Pop(&rxmsg)) {
+        if(rxmsg.header!=0) {
+            USBMIDI_InEpMsgWrite(&rxmsg);
+            MAP_SysCtlDelay(10000);
+        }
+    }
 }
 
 #endif

@@ -11,7 +11,9 @@ Modify SW_ROOT to point the your TivaWare folder, and click apply and close.
 
 Click Build, and it should build with no problems.
 
-Notice: make sure the `Debug` folder is empty, while transferring code between different computers.  
+>Notice: make sure the `Debug` folder is empty, while transferring code between different computers.  
+
+>Notice: the files in the `utils/` directory are not visible in the filesystem, because these are linked in a special way within the CCS eco system. See `.project` file.  
 
 #### Testing under Linux
 
