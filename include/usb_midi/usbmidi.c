@@ -2,12 +2,14 @@
  * usb_midi.c
  *
  *  Created on: Jan 31, 2020
- *      Author: andy
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
  *
  *  MOD HISTORY.
  *  2020-02-25 andy. We can combine all of the config descriptor parts into one big lump.
  *  	This means the Audio Control and the MIDI Streaming interfaces are combined into
  *  	one.
+ *  2021-05-20 andy -- add contact and copyright notice.
  *
  *
  *  The descriptors require some header/etc types for the API to work.
