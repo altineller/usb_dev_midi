@@ -2,7 +2,8 @@
  * midi.h
  *
  *  Created on: Apr 20, 2019
- *      Author: andy
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
  *
  * MIDI functions and definitions.
  *
@@ -12,6 +13,7 @@
  * Mod:
  * 2019-08-07 asp: Add definitions of the control change messages.
  * 2020-01-20 asp: Copy to Tiva-M4C design. Add usb-midi constant definitions.
+ * 2021-05-20 asp: Add copyright and contact info.
  */
 
 #ifndef MIDI_H_
