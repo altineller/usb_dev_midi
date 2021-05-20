@@ -1,3 +1,12 @@
+/*
+ * usbmidi_types.h
+ *
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
+ *
+ * MODS:
+ * 2021-05-20 andy, add this header comment.
+ */
 #ifndef USB_MIDI_USBMIDI_TYPES_H_
 #define USB_MIDI_USBMIDI_TYPES_H_
 
