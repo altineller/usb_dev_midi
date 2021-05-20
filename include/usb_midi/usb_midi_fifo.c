@@ -4,7 +4,9 @@
  * Implement a software FIFO for USB MIDI packets.
  *
  *  Created on: Oct 28, 2019
- *      Author: apeters
+ *      Author: andy peters, devel@latke.net, Tucson, Arizona
+ * (c) 2021, please credit and copy me on use in your project! 
+ *
  *  Mods:
  *  2019-10-30 ASP: support multiple instances of a FIFO by requiring a pointer to the FIFO structure
  *  	for each function call. All FIFOs are the same size.
